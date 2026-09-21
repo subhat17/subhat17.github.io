@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="浦北租房网提供浦北县最新房源信息，涵盖公寓、民房、商铺出租，真实房东直租，无中介费。实时更新浦北租房价格、小区环境及交通配套，助您快速找到满意住所。">
+    <meta name="keywords" content="浦北租房网, 浦北房屋出租, 浦北租房信息, 浦北房东直租, 浦北公寓出租, 浦北小区租房">
+    <title>浦北租房网-浦北县真实房源与房东直租信息平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --secondary-color: #f0f4f8;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --border-color: #e1e4e8;
+            --bg-color: #ffffff;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--secondary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-color);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            margin-left: 5px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-color);
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 102, 204, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+        }
+
+        .btn-search {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            height: 42px;
+            margin-top: auto;
+            margin-bottom: auto;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-search:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Quick Stats */
+        .stats-bar {
+            background: white;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .category-list {
+            background: white;
+            border-radius: var(--radius);
+            padding: 15px 0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .category-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: var(--text-dark);
+            transition: background 0.2s;
+        }
+
+        .category-item:hover {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+
+        .category-item .count {
+            background: #eee;
+            color: var(--text-gray);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .category-item.active {
+            background-color: rgba(0, 102, 204, 0.05);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Listings */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tag {
+            padding: 5px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-gray);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tag:hover, .tag.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 102, 204, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .card-badge.recommend {
+            background-color: #ff9800;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-price {
+            color: #ff5722;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-price small {
+            font-size: 12px;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .card-features {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .agent-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .agent-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .tip-card {
+            padding: 20px;
+            background-color: #f8fbff;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .tip-card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .tip-card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #bdc3c7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .main-nav {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+
+            .main-nav ul {
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .user-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 25px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+
+            .btn-search {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                浦北租房网<span>PuBei</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新房源</a></li>
+                    <li><a href="#">小区找房</a></li>
+                    <li><a href="#">出租房源</a></li>
+                    <li><a href="#">租房攻略</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">发布房源</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>在浦北轻松找到理想之家</h1>
+                <p>浦北租房网专注浦北县本地房产租赁服务，汇聚浦北最新公寓、小区、民房出租信息，房东直租，省去中介费，安全放心。</p>
+            </div>
+            <form class="search-box" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label>区域/小区</label>
+                    <input type="text" class="form-control" placeholder="输入浦北县城或具体小区">
+                </div>
+                <div class="form-group">
+                    <label>户型</label>
+                    <select class="form-control">
+                        <option value="">不限</option>
+                        <option value="1">一室一厅</option>
+                        <option value="2">两室一厅</option>
+                        <option value="3">三室及以上</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>价格范围</label>
+                    <select class="form-control">
+                        <option value="">不限</option>
+                        <option value="500">500元以下</option>
+                        <option value="1000">1000-1500元</option>
+                        <option value="2000">1500-2500元</option>
+                        <option value="3000">2500元以上</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-search">搜索房源</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>1,240+</h3>
+                    <p>在租房源</p>
+                </div>
+                <div class="stat-item">
+                    <h3>860+</h3>
+                    <p>真实房东</p>
+                </div>
+                <div class="stat-item">
+                    <h3>350+</h3>
+                    <p>优质小区</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50,000+</h3>
+                    <p>已成功租住</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="category-list">
+                    <div class="category-item active">
+                        <span>最新发布</span>
+                        <span class="count">248</span>
+                    </div>
+                    <div class="category-item">
+                        <span>浦北县城</span>
+                        <span class="count">120</span>
+                    </div>
+                    <div class="category-item">
+                        <span>小江镇</span>
+                        <span class="count">85</span>
+                    </div>
+                    <div class="category-item">
+                        <span>白石水镇</span>
+                        <span class="count">32</span>
+                    </div>
+                    <div class="category-item">
+                        <span>龙门镇</span>
+                        <span class="count">45</span>
+                    </div>
+                    <div class="category-item">
+                        <span>三合镇</span>
+                        <span class="count">28</span>
+                    </div>
+                    <div class="category-item">
+                        <span>白石水镇</span>
+                        <span class="count">15</span>
+                    </div>
+                    <div class="category-item">
+                        <span>安石镇</span>
+                        <span class="count">12</span>
+                    </div>
+                    <div class="category-item">
+                        <span>北通镇</span>
+                        <span class="count">10</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="section-header">
+                    <h2 class="section-title">热门推荐</h2>
+                    <a href="#" class="view-all">查看更多 &rarr;</a>
+                </div>
+
+                <div class="filter-tags">
+                    <span class="tag active">综合排序</span>
+                    <span class="tag">价格最低</span>
+                    <span class="tag">离我最近</span>
+                    <span class="tag">刚发布</span>
+                    <span class="tag">精装修</span>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Listing Card 1 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei1/400/300" alt="浦北一室一厅出租">
+                            <span class="card-badge recommend">房东直租</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">浦北县城一室一厅精装公寓，家电齐全</h3>
+                            <div class="card-price">¥950 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🛏️ 1室1厅</span>
+                                <span class="feature-item">🚿 独立卫浴</span>
+                                <span class="feature-item">🚗 地铁/公交</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县江城街道</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user1/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>房东直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Listing Card 2 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei2/400/300" alt="浦北两室出租">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">两室两厅出租，近三中，环境安静</h3>
+                            <div class="card-price">¥1,200 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🛏️ 2室2厅</span>
+                                <span class="feature-item">🌳 小区花园</span>
+                                <span class="feature-item">📶 宽带WiFi</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县小江镇</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user2/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>中介发布</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Listing Card 3 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei3/400/300" alt="浦北民房出租">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">独门独院民房出租，可做饭，适合合租</h3>
+                            <div class="card-price">¥600 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🏠 3室1厅</span>
+                                <span class="feature-item">🍳 独立厨房</span>
+                                <span class="feature-item">🚗 停车位</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县白石水镇</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user3/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>房东直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Listing Card 4 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei4/400/300" alt="浦北商铺出租">
+                            <span class="card-badge">旺铺</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">临街商铺出租，人流量大，适合餐饮</h3>
+                            <div class="card-price">¥3,500 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🏪 商业街</span>
+                                <span class="feature-item">🏢 两层结构</span>
+                                <span class="feature-item">🚿 卫生间</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县江城街道</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user4/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>中介发布</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Listing Card 5 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei5/400/300" alt="浦北公寓出租">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">浦北公寓精装两房，拎包入住</h3>
+                            <div class="card-price">¥1,500 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🛏️ 2室1厅</span>
+                                <span class="feature-item">🛋️ 家具家电</span>
+                                <span class="feature-item">🏊 健身房</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县小江镇</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user5/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>房东直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Listing Card 6 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/pubei6/400/300" alt="浦北单间出租">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">单间出租，采光好，近超市</h3>
+                            <div class="card-price">¥450 <small>/ 月</small></div>
+                            <div class="card-features">
+                                <span class="feature-item">🛏️ 单间</span>
+                                <span class="feature-item">🛌 上床下桌</span>
+                                <span class="feature-item">📶 4G信号</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>浦北县北通镇</span>
+                                <div class="agent-info">
+                                    <img src="https://picsum.photos/seed/user6/50/50" class="agent-avatar" alt="房东头像">
+                                    <span>房东直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="btn btn-outline" style="padding: 12px 40px;">加载更多房源</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">租房安全指南</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>核实身份信息</h3>
+                    <p>签约前务必核实房东身份及房产证原件，避免遇到二房东或虚假房源。浦北租房网提供房东实名认证服务。</p>
+                </div>
+                <div class="tip-card">
+                    <h3>明确费用明细</h3>
+                    <p>确认租金是否包含物业费、水电费、网费等，避免入住后产生隐形消费纠纷。</p>
+                </div>
+                <div class="tip-card">
+                    <h3>检查设施状况</h3>
+                    <p>入住前与房东共同检查房屋内的家具家电、门窗水电状况，并拍照留存，作为退房退还押金的依据。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>浦北租房网</h2>
+                    <p>专注于浦北本地房产租赁服务，致力于为浦北市民提供真实、高效、安全的房屋租赁信息平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>房源分类</h4>
+                    <ul>
+                        <li><a href="#">一室一厅</a></li>
+                        <li><a href="#">两室一厅</a></li>
+                        <li><a href="#">三室一厅</a></li>
+                        <li><a href="#">商铺出租</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">发布房源</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：0777-12345678</li>
+                        <li>邮箱：contact@pubei.com</li>
+                        <li>地址：广西壮族自治区钦州市浦北县</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 浦北租房网 版权所有 | 本网站信息仅供参考，请实地看房确认</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
