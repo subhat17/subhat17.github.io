@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="全职高手之巅峰荣耀官方资讯与粉丝社区，包含角色图鉴、小说章节、游戏攻略、同人创作及热门话题讨论。">
+    <meta name="keywords" content="全职高手之巅峰荣耀,全职高手,荣耀,叶修,苏沐橙,兴欣网吧">
+    <title>全职高手之巅峰荣耀-官方资讯与荣耀世界指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #ffcc00;
+            --primary-dark: #e6b800;
+            --secondary: #1a1a1a;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f4f4;
+            --bg-card: #ffffff;
+            --border: #e0e0e0;
+            --font-stack: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 5px solid var(--primary);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: white;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: rgba(255, 204, 0, 0.2);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--secondary);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .news-img {
+            height: 180px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-img img {
+            transform: scale(1.05);
+        }
+
+        .news-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .news-link {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            color: var(--secondary);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: #eee;
+            color: #666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background: var(--primary); color: white; }
+        .rank-list li:nth-child(2) .rank-num { background: #ffcc00; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background: #e6b800; color: white; }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-name {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .rank-meta {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Character Section */
+        .character-section {
+            background-color: white;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .char-card {
+            text-align: center;
+        }
+
+        .char-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--primary);
+            padding: 5px;
+            background: white;
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .char-class {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: #888;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>荣耀</span>巅峰荣耀
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">小说连载</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">游戏攻略</a></li>
+                    <li><a href="#">同人社区</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-tags">
+                    <span class="tag">全职高手续作</span>
+                    <span class="tag">荣耀世界</span>
+                </div>
+                <h1>荣耀巅峰<br>再续传奇</h1>
+                <p>重返嘉世，重登巅峰。叶修带领兴欣战队，在荣耀世界的新篇章中，面对更强大的对手，书写属于他们的荣耀史诗。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">开始阅读</a>
+                    <a href="#" class="btn btn-outline">观看动画</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/gloryhero/600/400" alt="全职高手之巅峰荣耀主视觉">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-layout">
+            <!-- Content Column -->
+            <div class="content-col">
+                <section class="news-section">
+                    <div class="section-title">
+                        <span>最新资讯</span>
+                        <a href="#">查看更多 &rarr;</a>
+                    </div>
+                    
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-img">
+                                <img src="https://picsum.photos/seed/glory1/400/250" alt="小说更新">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-date">2023-10-24</div>
+                                <h3 class="news-title"><a href="#">小说第XXX章更新：嘉世新援亮相</a></h3>
+                                <p class="news-excerpt">随着新赛季的临近，嘉世战队正式宣布新援加入，叶修将如何调整战术布局？精彩章节等你来读...</p>
+                                <a href="#" class="news-link">阅读全文</a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-img">
+                                <img src="https://picsum.photos/seed/glory2/400/250" alt="游戏活动">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-date">2023-10-22</div>
+                                <h3 class="news-title"><a href="#">荣耀手游巅峰荣耀活动开启</a></h3>
+                                <p class="news-excerpt">全服联动开启，叶修、苏沐橙等经典角色限时返场，完成指定任务即可获取限定称号...</p>
+                                <a href="#" class="news-link">查看活动</a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-img">
+                                <img src="https://picsum.photos/seed/glory3/400/250" alt="角色介绍">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-date">2023-10-20</div>
+                                <h3 class="news-title"><a href="#">新角色“夜雨声烦”技能解析</a></h3>
+                                <p class="news-excerpt">深入解析新登场角色的战斗风格，探讨其在团队副本及PVP中的定位与玩法建议...</p>
+                                <a href="#" class="news-link">查看详情</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="character-section">
+                    <div class="section-title">
+                        <span>热门角色</span>
+                        <a href="#">角色图鉴 &rarr;</a>
+                    </div>
+                    <div class="char-grid">
+                        <div class="char-card">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/yejiu/200/200" alt="叶修">
+                            </div>
+                            <div class="char-name">叶修</div>
+                            <div class="char-class">战斗法师 / 沉默</div>
+                        </div>
+                        <div class="char-card">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/sumucheng/200/200" alt="苏沐橙">
+                            </div>
+                            <div class="char-name">苏沐橙</div>
+                            <div class="char-class">枪炮师 / 紫霞</div>
+                        </div>
+                        <div class="char-card">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/yangchun/200/200" alt="唐柔">
+                            </div>
+                            <div class="char-name">唐柔</div>
+                            <div class="char-class">柔道 / 柔光</div>
+                        </div>
+                        <div class="char-card">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/wangjiexi/200/200" alt="王杰希">
+                            </div>
+                            <div class="char-name">王杰希</div>
+                            <div class="char-class">元素法师 / 微草</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget-title">热门榜单</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <div class="rank-info">
+                                <span class="rank-name">荣耀世界新地图</span>
+                                <span class="rank-meta">攻略 1.2w</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <div class="rank-info">
+                                <span class="rank-name">叶修的微操技巧</span>
+                                <span class="rank-meta">讨论 8.5k</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <div class="rank-info">
+                                <span class="rank-name">嘉世战队重组传闻</span>
+                                <span class="rank-meta">资讯 6.3k</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <div class="rank-info">
+                                <span class="rank-name">原著小说连载</span>
+                                <span class="rank-meta">阅读 5.1k</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <div class="rank-info">
+                                <span class="rank-name">动画版制作进度</span>
+                                <span class="rank-meta">关注 4.2k</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">关于作品</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
+                        《全职高手之巅峰荣耀》是蝴蝶蓝所著的电竞题材小说，讲述了荣耀世界背景下的新故事。这里是粉丝聚集地，提供最新的章节更新、角色分析及同人创作。
+                    </p>
+                    <a href="#" style="color: var(--primary); font-weight: bold; font-size: 0.9rem;">了解更多 &rarr;</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>荣耀巅峰</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源导航</h4>
+                    <ul>
+                        <li><a href="#">小说章节</a></li>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">周边商城</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区互动</h4>
+                    <ul>
+                        <li><a href="#">粉丝论坛</a></li>
+                        <li><a href="#">同人投稿</a></li>
+                        <li><a href="#">活动报名</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 全职高手之巅峰荣耀粉丝社区. All Rights Reserved. 本站为非官方粉丝站点，内容仅供学习交流使用。
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
