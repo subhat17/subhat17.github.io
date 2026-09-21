@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑跑卡丁车辅助 - 专业漂移技巧与工具使用指南</title>
+    <meta name="description" content="本站提供跑跑卡丁车辅助工具的客观评测、最新版本下载指南、使用注意事项及防封号安全提示。帮助玩家提升漂移技巧，了解游戏公平竞技环境。">
+    <meta name="keywords" content="跑跑卡丁车辅助,跑跑辅助,漂移辅助,跑跑卡丁车工具,跑跑卡丁车攻略">
+    <style>
+        :root {
+            --primary-color: #ffcc00;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff4500;
+            --bg-light: #f4f4f4;
+            --text-main: #333;
+            --text-light: #666;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --border-radius: 8px;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 204, 0, 0.1) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 80% 20%, rgba(255, 69, 0, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 204, 0, 0.1);
+        }
+
+        /* Info Cards */
+        .info-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--primary-color);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            background-color: #fff;
+            padding: 4rem 0;
+        }
+
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            background: #fafafa;
+        }
+
+        .tool-info {
+            flex: 1;
+        }
+
+        .tool-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .tool-info .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #eee;
+            color: #666;
+            margin-right: 0.5rem;
+        }
+
+        .tool-info .tag.feature {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .tool-info .tag.security {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .tool-info p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Guide & Tips */
+        .guide-section {
+            padding: 4rem 0;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+
+        .guide-sidebar h3 {
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .guide-sidebar ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .guide-sidebar a {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .guide-sidebar a:hover {
+            color: var(--accent-color);
+        }
+
+        .guide-content article {
+            background: #fff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .guide-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .guide-content h4 {
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .guide-content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .guide-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #856404;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: #fff;
+            padding: 4rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding-bottom: 1.5rem;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #999;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            🏎️ 跑跑<span>辅助</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#tools">工具下载</a></li>
+                <li><a href="#guide">使用指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>跑跑卡丁车辅助工具</h1>
+            <p>探索专业辅助工具的使用方法，提升漂移技巧，了解安全防护机制。我们提供客观的资讯与下载指引。</p>
+            <div>
+                <a href="#tools" class="btn btn-primary">查看工具列表</a>
+                <a href="#guide" class="btn btn-outline">阅读使用指南</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="info-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心功能与优势</h2>
+                <p>了解辅助工具在游戏中的实际应用场景</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">🎯</span>
+                    <h3>精准定位</h3>
+                    <p>通过算法优化按键响应，减少操作延迟，确保在高速漂移时的精准控制。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3>安全防护</h3>
+                    <p>内置特征码过滤与内存保护机制，降低被反作弊系统检测的风险。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📊</span>
+                    <h3>数据监控</h3>
+                    <p>实时显示当前车速、氮气状态及按键触发频率，帮助玩家优化操作节奏。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门工具与版本</h2>
+                <p>当前主流的跑跑卡丁车辅助工具概览</p>
+            </div>
+            <div class="tool-list">
+                <div class="tool-item">
+                    <div class="tool-info">
+                        <h4>极速漂移辅助 Pro</h4>
+                        <span class="tag feature">核心功能</span>
+                        <span class="tag security">防封版</span>
+                        <p>支持全段位漂移检测，自动触发氮气加速，内置虚拟键盘模拟。</p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">下载</a>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-info">
+                        <h4>自动连喷辅助</h4>
+                        <span class="tag feature">进阶技巧</span>
+                        <p>专注于连喷操作优化，减少按键次数，提高氮气利用率。</p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">下载</a>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-info">
+                        <h4>内存读数查看器</h4>
+                        <span class="tag security">检测工具</span>
+                        <p>仅供技术分析使用，用于监控游戏进程内存数据变化。</p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">下载</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <div class="guide-container">
+                <aside class="guide-sidebar">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#guide-basic">基础设置</a></li>
+                        <li><a href="#guide-advanced">进阶技巧</a></li>
+                        <li><a href="#guide-safety">安全提示</a></li>
+                        <li><a href="#guide-troubleshooting">故障排查</a></li>
+                    </ul>
+                </aside>
+                <article class="guide-content">
+                    <div id="guide-basic">
+                        <h3>基础设置指南</h3>
+                        <h4>1. 安装与启动</h4>
+                        <p>下载最新版本的工具压缩包后，请勿直接运行，建议先进行杀毒扫描。解压后以管理员身份运行主程序，避免权限不足导致无法读取游戏内存。</p>
+                        <h4>2. 游戏兼容性选择</h4>
+                        <p>启动跑跑卡丁车客户端后，在辅助工具界面选择对应的服务器（如国服、韩服）。确保游戏版本与工具版本号匹配，否则可能导致无法识别游戏进程。</p>
+                    </div>
+
+                    <div id="guide-advanced">
+                        <h3>进阶使用技巧</h3>
+                        <h4>按键映射调整</h4>
+                        <p>根据个人键盘布局习惯，在辅助设置中调整“漂移”、“加速”等核心功能的触发键位。建议将辅助功能键位设置在键盘左手区，以便右手进行方向操作。</p>
+                        <h4>漂移参数微调</h4>
+                        <p>在“高级设置”中，可以调整漂移判定角度。过高的角度可能导致车辆转向过度，建议在练习场内进行低速测试后，逐步调高至实战参数。</p>
+                    </div>
+
+                    <div id="guide-safety">
+                        <h3>安全使用提示</h3>
+                        <div class="warning-box">
+                            <strong>重要提示：</strong> 任何外挂工具都存在一定的封号风险。请勿在账号价值较高的VIP账号或职业账号上使用。
+                        </div>
+                        <ul>
+                            <li><strong>关闭不必要的后台程序：</strong> 电脑运行的其他软件可能会干扰内存读写，建议关闭浏览器、下载工具等。</li>
+                            <li><strong>定期更新工具：</strong> 游戏反作弊系统更新后，旧版辅助可能失效，请关注工具作者的更新日志。</li>
+                            <li><strong>避免频繁切换网络：</strong> 在使用过程中频繁断网或切换IP可能触发系统的异常检测机制。</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于跑跑卡丁车辅助工具的常见疑问</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">辅助工具会影响游戏帧数吗？</div>
+                    <div class="faq-answer">
+                        <p>正规辅助工具采用底层驱动注入方式，对CPU和内存的开销极小，通常不会对游戏帧数产生明显影响。但为了保险起见，建议关闭电脑中不必要的后台进程。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">为什么有时候检测不到游戏进程？</div>
+                    <div class="faq-answer">
+                        <p>这通常是因为游戏版本更新导致内存地址变化。请确认游戏客户端已完全关闭，重新启动游戏后再尝试检测。如果问题依旧，请下载最新版本的辅助工具。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">使用辅助会被永久封号吗？</div>
+                    <div class="faq-answer">
+                        <p>游戏封号机制通常基于特征码检测和异常行为分析。虽然存在封号风险，但只要使用正规渠道获取的工具，并遵守安全使用规范，被封号的概率相对较低。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">工具支持哪些操作系统？</div>
+                    <div class="faq-answer">
+                        <p>目前主流工具支持Windows 7、Windows 10及Windows 11系统。对于64位系统支持效果更佳，部分旧版工具可能仅支持32位系统。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="about">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p>本站致力于为跑跑卡丁车玩家提供客观、中立的工具资讯与使用指导，帮助玩家在合规范围内提升游戏体验。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#tools">工具下载</a></li>
+                    <li><a href="#guide">使用教程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>免责声明</h4>
+                <ul>
+                    <li>本站内容仅供技术研究与学习参考。</li>
+                    <li>请勿将本站提供的工具用于商业牟利。</li>
+                    <li>使用本站工具产生的任何后果由用户自行承担。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 跑跑卡丁车辅助资源站. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+<script>
+    // FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
